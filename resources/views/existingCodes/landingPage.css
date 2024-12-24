@@ -1,0 +1,232 @@
+/* resources/css/custom/navbar.css */
+
+/* Define CSS Variables for Easy Customization */
+:root {
+    /* Light Mode Variables */
+    --background-color: #ffffff;
+    --text-color: #343a40;
+    --section-bg-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+    --card-text-color: #343a40;
+    --btn-primary-bg: #28a745;
+    --btn-primary-hover-bg: #218838;
+    --link-color: #28a745;
+    --link-hover-color: #218838;
+    --carousel-caption-bg: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #f8f9fa;
+    --section-bg-color: #1e1e1e;
+    --card-bg-color: #2c2c2c;
+    --card-text-color: #f8f9fa;
+    --btn-primary-bg: #28a745;
+    --btn-primary-hover-bg: #218838;
+    --link-color: #90caf9;
+    --link-hover-color: #64b5f6;
+    --carousel-caption-bg: rgba(0, 0, 0, 0.7);
+}
+
+/* General Page Background and Text */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure All Text Inherits Color */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+span,
+strong {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Section Backgrounds */
+.hero-section,
+.purpose-section,
+.features-section,
+.benefits-section,
+.contact-section {
+    background-color: var(--section-bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+            rgba(0, 123, 255, 0.7),
+            rgba(0, 86, 179, 0.7)
+        ),
+        url("/images/pic1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .hero-section {
+    filter: brightness(0.8);
+    color: var(--text-color);
+    text-shadow: none;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    border-color: var(--btn-primary-bg);
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover-bg);
+    border-color: var(--btn-primary-hover-bg);
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Form Elements */
+.form-control {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border: 1px solid #ced4da;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .form-control {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border-color: #495057;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #ced4da;
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 800px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: var(--carousel-caption-bg);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+    color: var(--card-bg-color);
+}
+
+.features-section {
+    background-color: var(--section-bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.features-section .carousel-item {
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.features-section .carousel-caption img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.features-section .carousel-caption img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+.purpose-section .card,
+.benefits-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.purpose-section .card:hover,
+.benefits-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-body .features-section {
+    background-color: var(--card-text-color);
+    color: var(--section-bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-body .features-section .carousel-item img {
+    filter: brightness(0.6);
+}
+
+body.dark-body .features-section .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-body .features-section .carousel-caption h3,
+body.dark-body .features-section .carousel-caption p {
+    color: var(--text-color);
+}
+
+/* Success Alert */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+body.dark-mode .alert-success {
+    background-color: #155724;
+    color: #d4edda;
+    border-color: #155724;
+}
+
+/* Ensure List and Span Elements Respond */
+ul,
+ol,
+li {
+    color: var(--text-color);
+}
+
+span,
+strong,
+small {
+    color: var(--text-color);
+}
+

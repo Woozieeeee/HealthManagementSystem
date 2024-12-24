@@ -1,0 +1,159 @@
+/* resources/css/custom/navbar.css */
+
+/* Define CSS Variables for Light and Dark Modes */
+:root {
+    /* Light Mode Variables */
+    --background-color: #ffffff;
+    --text-color: #343a40;
+    --navbar-bg-color: rgba(255, 255, 255, 0.95);
+    --navbar-text-color: #343a40;
+    --navbar-link-hover-bg: rgba(40, 167, 69, 0.1);
+    --navbar-text-color-hover: #28a745;
+    --btn-outline-success-color: #28a745;
+    --btn-outline-success-border: #28a745;
+    --btn-outline-secondary-color: #6c757d;
+    --btn-outline-secondary-border: #6c757d;
+    --btn-outline-secondary-hover-bg: #6c757d;
+    --link-color: #28a745;
+    --link-hover-color: #218838;
+}
+
+body.dark-mode {
+    /* Dark Mode Overrides */
+    --background-color: #121212;
+    --text-color: #f8f9fa;
+    --navbar-bg-color: rgba(18, 18, 18, 0.95);
+    --navbar-text-color: #f8f9fa;
+    --navbar-link-hover-bg: rgba(40, 167, 69, 0.1);
+    --navbar-text-color-hover: #28a745;
+    --btn-outline-success-color: #28a745;
+    --btn-outline-success-border: #28a745;
+    --btn-outline-secondary-color: #f8f9fa;
+    --btn-outline-secondary-border: #f8f9fa;
+    --btn-outline-secondary-hover-bg: #6c757d;
+    --link-color: #28a745;
+    --link-hover-color: #218838;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-link {
+    color: var(--navbar-text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--navbar-text-color-hover) !important;
+    background-color: var(--navbar-link-hover-bg);
+    border-radius: 5px;
+}
+
+/* Authentication and Dark Mode Toggle Group */
+.auth-darkmode-group .btn{
+    color: var(--btn-outline-secondary-color);
+    border-color: var(--btn-outline-secondary-border);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-darkmode-group .btn:hover,
+.auth-darkmode-group .btn:focus {
+    background-color: var(--btn-outline-secondary-hover-bg);
+    color: #ffffff;
+    border-color: var(--btn-outline-secondary-hover-bg);
+}
+
+.btn-outline-success {
+    color: var(--btn-outline-success-color);
+    border-color: var(--btn-outline-success-border);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+    background-color: var(--btn-outline-success-color);
+    color: #ffffff;
+    border-color: var(--btn-outline-success-border);
+}
+
+.btn-outline-secondary {
+    color: var(--btn-outline-secondary-color);
+    border-color: var(--btn-outline-secondary-border);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: var(--btn-outline-secondary-hover-bg);
+    color: #ffffff;
+    border-color: var(--btn-outline-secondary-hover-bg);
+}
+
+a.text-decoration-none {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a.text-decoration-none:hover,
+a.text-decoration-none:focus {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Scroll Effect Styles */
+.navbar.scrolled #navbar-logo {
+    height: 30px; /* Shrink logo size when scrolled */
+    transition: height 0.3s ease;
+}
+
+.navbar.scrolled .hide-on-scroll {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hide-on-scroll {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+.brand-name{
+    color: var(--navbar-text-color);
+}
+
+.body.dark-mode #navbar-logo{
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+
+/* Smooth transitions */
+.navbar .nav-link,
+.auth-darkmode-group,
+.brand-name {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Ensure navbar has smooth transition when toggling scrolled class */
+.navbar.transition-all {
+    transition: all 0.3s ease;
+}
