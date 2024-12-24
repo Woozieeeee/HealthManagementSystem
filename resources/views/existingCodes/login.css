@@ -1,0 +1,34 @@
+body.dark-mode .card {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+body.dark-mode .form-control {
+    background-color: #495057;
+    color: #f8f9fa;
+    border-color: #6c757d;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #495057;
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+body.dark-mode .form-check-label {
+    color: #f8f9fa;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+body.dark-mode .btn-link {
+    color: #28a745;
+}
